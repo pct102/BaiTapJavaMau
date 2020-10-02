@@ -9,11 +9,11 @@ import java.util.function.Consumer;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String chuoi = sc.nextLine();
-        sc.close();
+        // Scanner sc = new Scanner(System.in);
+        // String chuoi = sc.nextLine();
+        // sc.close();
 
-    MyThread t1 = new MyThread("ChuoiHoa", chuoi);
+    MyThread t1 = new MyThread("ChuoiHoa", "");
     t1.start();
         
     }
@@ -66,8 +66,11 @@ class MyThread extends Thread{
 
     @Override
     public void run() {
-        System.out.println("Day la Bai 02");
-        int numberOfCharactor = 8; 
+        System.out.println("Day la Bai 02, nhap vao do dai chuoi n ky tu: ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.close();
+        int numberOfCharactor = n; 
         System.out.println("randomString1: " + this.randomAlphaNumeric(numberOfCharactor));         
         System.out.println("randomString1: " + this.randomAlphaNumeric(numberOfCharactor));         
         System.out.println("randomString1: " + this.randomAlphaNumeric(numberOfCharactor));         
